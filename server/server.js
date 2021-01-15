@@ -1,19 +1,29 @@
 let indexFile;
+var url = require("url");
+var path = url.parse(request.url).pathname;
 const fs = require('fs').promises;
 http = require("http")
 
 http.createServer(function (request, response) {
-    const requestListener = function(req,resp){
-        fs.readFile(__dirname + "/index.html")
-        .then(contents =>{
-            indexFile = contents;
-        
-        });
+    switch (path){
+        case '/index.html':
+                fs.readFile(__dirname + path, function(error,data){
+                    indexFile = path;
+                    if (error){
+                        response.writeHead(404);
+                        response.write(error);
+                        response.end();
+                    
+                    } else{
+                        response.writeHead(200, {'Content-Type': 'text/html'});
+                        response.write(data);
+                        console.log(data);
+                        response.end();
+                    }
+                })
     }
-  response.writeHead(200, {'Content-Type': 'text/html'});
-  response.end(indexFile);
+    
 }).listen(8080);
 
-console.log('Server running at http://127.0.0.1:8080/');
-console.log(__dirname);
-console.log(indexFile);
+//console.log('Server running at http://127.0.0.1:8080/');
+//console.log(indexFile);
