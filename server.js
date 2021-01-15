@@ -1,18 +1,15 @@
-let indexFile;
-const fs = require('fs').promises;
-http = require("http")
 
-http.createServer(function (request, response) {
-    const requestListener = function(req,resp){
-        fs.readFile(__dirname + "/index.html")
-        .then(contents =>{
-            indexFile = contents;
-        
-        });
-    }
-  response.writeHead(200, {'Content-Type': 'text/html'});
-  response.end(indexFile);
-}).listen(8080);
+  var express = require("express");
+  var app = express();
+  
+  app.get("/", function (request, response){
+      //show this file when the "/" is requested
+      response.sendFile(__dirname+"/index.html"); //shows the html page through server
+  });
+  app.listen(8080); //starts the server
+  
+ 
+
 
 console.log('Server running at http://127.0.0.1:8080/');
-console.log(__dirname);
+
