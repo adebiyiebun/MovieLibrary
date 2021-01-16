@@ -1,6 +1,8 @@
-
+const path = require('path');
   var express = require("express");
   var app = express();
+
+  app.use(express.static('public'));
   
   app.get("/", function (request, response){
       //show this file when the "/" is requested
