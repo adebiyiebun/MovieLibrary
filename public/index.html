@@ -58,11 +58,9 @@
           <div class="row align-items-center justify-content-between text-left">
             <div class="col-md-5 text-right">
               <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li class="has-children">
-                  <a href="#home-section" class="nav-link">Home</a>
-                </li>
-                <li><a id="Anchor" href="#services-section" class="nav-link">Log In</a></li>
-                
+                <li class="has-children"><a href="#home-section" class="nav-link">Home</a></li>
+                <li><a  href="#services-section" class="nav-link"id="Anchor2" onclick="Search()">Search Movies</a></li>
+                <li id="logout"></li>
                   
               </ul>
             </div>
@@ -71,13 +69,13 @@
             </div>
             <div class="col-md-5 text-right text-lg-left">
               <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                <li ><a href="#services-section" class="nav-link" id="Anchor">User Profile</a></li>
+                <li ><a href="#services-section" class="nav-link" id="Anchor" onclick="Profile()">User Profile</a></li>
                 
              
               </ul>
 
-              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
-                <li><a href="#" class="js-menu-toggle">Menu</a></li>
+              <ul class="site-nav-ul-none-onepage text-right d-inline-block">
+                <li><a href="#" class="js-menu-toggle">Menu</a></li> 
               </ul>
 
             </div>
@@ -164,111 +162,24 @@
 
 
       <div class="unslate_co--section" id="services-section">
-        <div class="container">
-          <div class="content">
+        
+        <div id="container">
+            
          <div class="section-heading-wrap text-center mb-5" id="content2">
             <h2 id="title" class="heading-h2 text-center divider"><span class="gsap-reveal">Log In</span></h2>
             <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
           </div>
-
-         <!--  <div class="row gutter-v3">
-            <div class="col-md-6 col-lg-4 mb-4">  this is the container!
-              <div class="feature-v1">
-                <div class="wrap-icon mb-3">
-                  
-                </div>
-                <h3 class="movietitle"></h3>
-                <p class="movieinfo"> </p>
-              </div> 
-            </div>
-              
-         
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                <div class="wrap-icon mb-3">
-                     
-                  </div>
-                  <h3 class="movietitle"></h3>
-                  <p class="movieinfo"></p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                  <div class="wrap-icon mb-3">
-                       
-                    </div>
-                    <h3 class="movietitle"></h3>
-                    <p class="movieinfo"> </p>
-                </div> 
+          <div id="content" class="content">
+            <form id="form_id">
+            <div class="grid-2">
+              <input type="text" placeholder="Email" id="email" required> 
+              <input type="text" placeholder="Password" id="password" required>
+              <div class="submit">
+                  <button type="button" onclick="validate()">Login</button>
+                  <button type="reset" onclick="localStorage.clear()">Reset</button>
               </div>
-              <div class="col-md-6 col-lg-4 mb-4">
-                  <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                    <div class="wrap-icon mb-3">
-                         
-                      </div>
-                      <h3 class="movietitle"></h3>
-                      <p class="movieinfo"> </p>
-                  </div> 
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                      <div class="wrap-icon mb-3">
-                           
-                        </div>
-                        <h3 class="movietitle"></h3>
-                        <p class="movieinfo"> </p>
-                    </div> 
-                  </div>
-                  <div class="col-md-6 col-lg-4 mb-4">
-                      <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                        <div class="wrap-icon mb-3">
-                             
-                          </div>
-                          <h3 class="movietitle"></h3>
-                          <p class="movieinfo"> </p>
-                      </div> 
-                    </div>
-           
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/003-contact-book.svg" alt="Image" class="img-fluid" width="45">
-                </div>
-                <h3>User <br> Experience</h3>
-                <p class="movieinfo3"></p> 
-              </div> 
             </div>
-
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/004-percentage.svg" alt="Image" width="45">
-                </div>
-                <h3>Web <br> Development</h3>
-                <p class="movieinfo4">></p> </p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/006-goal.svg" alt="Image" width="45">
-                </div>
-                <h3>WordPress <br> Solutions</h3>
-                <p class="movieinfo5"></p> </p>
-              </div> 
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-                <div class="wrap-icon mb-3">
-                  <img src="images/svg/005-line-chart.svg" alt="Image" width="45">
-                </div>
-                <h3>Mobile <br> Applications</h3>
-                <p class="movieinfo6"></p> </p>
-              </div> 
-            </div>
-
-          </div> --> 
-
+          </form>
 
         </div> 
       </div>

@@ -1,7 +1,7 @@
 {
     "users": [
       {
-        "userId": 1,
+        "userId": 0,
         "firstName": "Ebun",
         "lastName": "Adebiyi",
         "phoneNumber": "1100012",
@@ -10,7 +10,7 @@
         "storedMovies":["464052","508442","614911"]
       },
       {
-        "userId": 2,
+        "userId": 1,
         "firstName": "John",
         "lastName": "Smith",
         "phoneNumber": "330141",
@@ -19,7 +19,7 @@
         "storedMovies":["464052","508442","614911"]
       },
       {
-        "userId": 3,
+        "userId": 2,
         "firstName": "Joanna",
         "lastName": "Ross",
         "phoneNumber": "4079093",
@@ -28,7 +28,7 @@
         "storedMovies":["464052","508442","614911"]
       },
       {
-        "userId": 4,
+        "userId": 3,
         "firstName": "Rachel",
         "lastName": "Zane",
         "phoneNumber": "222222222",
@@ -37,7 +37,7 @@
         "storedMovies":["464052","508442","614911"]
       },
       {
-        "userId": 5,
+        "userId": 4,
         "firstName": "Michael",
         "lastName": "Ross",
         "phoneNumber": "111111111",

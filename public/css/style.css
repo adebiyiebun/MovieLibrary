@@ -45,7 +45,7 @@ body, .unslate_co--site-inner {
 
 ::selection {
   background: #000;
-  color: #fff;
+   color: #fff;
 }
 
 a {
@@ -63,6 +63,29 @@ a, a:hover {
   position: relative;
   width: 100%;
   z-index: 1;
+}
+input[type=text] {
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: black;
+  width: 40%;
+  margin-left: 70px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+   
+}
+button{
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: black;
+  width: 25%;
+  color: white; 
+}
+.submit{
+  margin-top: 30px;
+  margin-left: 370px;
+  margin-right: 20px;
 }
 
 @media (max-width: 991.98px) {
@@ -235,7 +258,7 @@ a, a:hover {
 .unslate_co--site-nav .site-nav-ul > li > a:hover:before, .unslate_co--site-nav .site-nav-ul-none-onepage > li > a:hover:before {
   width: calc(100% - 14px);
 }
-
+site-nav-ul js-clone-nav text-left d-none d-lg-inline-block
 .unslate_co--site-nav .site-nav-ul > li > a.active, .unslate_co--site-nav .site-nav-ul-none-onepage > li > a.active {
   position: relative;
 }
@@ -566,11 +589,12 @@ a, a:hover {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
+  
 }
 
 .unslate_co--site-mobile-menu .close-wrap {
   margin-right: 20px;
-  position: relative;
+  
 }
 
 .unslate_co--site-mobile-menu .close-wrap a {
@@ -680,10 +704,11 @@ a, a:hover {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  
 }
 
 .unslate_co--site-mobile-menu ul > li.has-children > ul > li.has-children .arrow-collapse {
-  top: -10px;
+  top: -0px;
 }
 
 .cover-v1 {
@@ -939,7 +964,7 @@ a, a:hover {
 .portfolio-item {
   overflow: hidden;
 }
-
+before
 .portfolio-item img {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -1271,7 +1296,7 @@ figure.dotted-bg:before {
   margin-right: -15px !important;
   margin-left: -15px !important;
 }
-
+::before
 @media (max-width: 991.98px) {
   .gutter-isotope-item {
     margin-left: -15px !important;
@@ -1596,6 +1621,7 @@ figure.dotted-bg:before {
   }
 }
 
+site-nav-ul-none-onepage
 .contact-info-v1 > div {
   margin-bottom: 30px;
 }
