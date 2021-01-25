@@ -15,6 +15,11 @@ var app = express();
   response.sendFile(__dirname+"/public/data.json"); //shows the html page through server
   //console.log(response);
 });
+app.get("/search", function (request, response){ //show this file when the "/" is requested
+  response.sendFile(__dirname+"/public/movie.json"); //shows the html page through server
+  //console.log(response);
+});
+
   app.listen(8080); //starts the server
  
 console.log('Server running at http://127.0.0.1:8080/');

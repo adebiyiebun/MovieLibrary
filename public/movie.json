@@ -1,0 +1,8 @@
+{
+        "movies":[
+                {
+                        "actors":["Gal Gadot","Elizabeth Olsen","Scarlett Johansson","Henry Cavill","Dwayne Johnson","Anya Taylor-Joy","Robert Downey Jr.","Tom Cruise","Johnny Depp","Will Smith","Robert De Niro","Denzel Washington","Morgan Freeman","Meryl Streep","Nicole Kidman","Jennifer Lawrence","Anne Hathaway","Angelina Jolie","Reese Witherspoon","Margot Robbie"],
+                        "genres":["Action","Adventure","Animation","Comedy","Crime","Documentary","Drama","Family","Horror","Mystery","Romance"]
+                }
+        ]
+}

@@ -7,7 +7,7 @@
         "phoneNumber": "1100012",
         "emailAddress": "ebunadebiyi@hotmail.com",
         "password":"Ade12Eb",
-        "storedMovies":["464052","508442","614911"]
+        "storedMovies":["464052","508442","614911","512200"]
       },
       {
         "userId": 1,
@@ -43,7 +43,7 @@
         "phoneNumber": "111111111",
         "emailAddress": "mikeross@hotmail.com",
         "password":"MikeRoss3",
-        "storedMovies":["464052","508442","614911"]
+        "storedMovies":["464052","508442","614911","495764"]
       }
     ]
   }
