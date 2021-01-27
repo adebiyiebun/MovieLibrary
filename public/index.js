@@ -1,4 +1,4 @@
-
+// key for MOVIE API d43b2cf37b68ac54e47dbe77c0b7edb6 function for getting top 6 populat movies 
 var userID;
 var filmphoto = [];
 var movieinfo = [];
@@ -47,7 +47,6 @@ function validate(){
   console.error('Error:', error);
 });
 }
-// key for MOVIE API d43b2cf37b68ac54e47dbe77c0b7edb6 function for getting top 6 populat movies 
 function callData(){
     document.getElementById('content2').innerHTML='';
     document.getElementById('logout').innerHTML= '<a  href="/" class="nav-link"id="Anchor2" onclick="localStorage.clear()">Logout</a>';
@@ -161,7 +160,7 @@ function Profile(){
     .catch((error) => {
       console.error('Error:', error);
     });
-    }   
+}   
 function userMovies(keys){
         //console.log(keys);
         let Uphotolist=[];
@@ -193,6 +192,7 @@ function userMovies(keys){
       '</div>');
       //console.log(list);
       document.getElementById("row").innerHTML=list;
+      
        })//;
        .catch((error) => {
         console.error('Error:', error);
@@ -202,7 +202,7 @@ function userMovies(keys){
       }
     
 
-    };
+}
 function loggedIn(){
     //console.log(userID);
     if (userID == null){
@@ -212,13 +212,119 @@ function loggedIn(){
         return userID;
     }    
 }
+function SearchPopulate(){ 
+  document.getElementById('title').innerHTML='<span class="gsap-reveal">Search Movies</span>';
+  document.getElementById('row').innerHTML='';
+  var newElement = document.createElement('div');
+  newElement.innerHTML='<form class="searchform">'+
+  '<label for="options">Search By:</label>'+
+  '<select name="options" id="options">'+
+    '<optgroup label="Choose:">'+
+      '<option value="genres">Genres</option>'+
+      '<option value="actors">Actors/Actresses</option>'+
+    '</optgroup>'+
+  '</select>'+
+  '<button onclick="SearchPage()" id="options" type="button">Search</button>'+
+'</form>';
+  document.getElementById('container').appendChild(newElement);
+}
 function SearchPage(){
+  document.getElementById('content2').innerHTML='<h2 id="title" class="heading-h2 text-center divider"><span class="gsap-reveal"> Search Movies</span></h2>'+
+  '<span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>'+
+  '</div>';
+  document.getElementById('row').innerHTML='';
   fetch('/search')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      var option = document.getElementById('options').value;
+      var element = document.getElementById('searchoptions');
+      var HTML = '';
+      if (option=='genres'){
+        for (let i=0;i<data.movies[0].genres.length;i++){
+          HTML+= '<option value=        "'+data.movies[0].genres[i].id+'">'+data.movies[0].genres[i].name+'</option>'
+        }
+      }else if (option=='actors'){
+        for (let i=0;i<data.movies[0].actors.length;i++){
+          HTML+= '<option value=        "'+data.movies[0].actors[i]+'">'+data.movies[0].actors[i]+'</option>'
+        }
+      } else{
+        alert('Please Choose An Option');
+      }
+      var newElement = document.createElement('div');
+          newElement.setAttribute('id', 'searchoptions');
+        newElement.innerHTML='<form id="searchform" class="searchform">'+
+                              '<label for="options">'+option+'</label>'+
+                              '<select name="options2" id="options2">'+ HTML +
+                              '</select>'+
+                              '<button onclick="SearchPage2()" id="options" type="button">Search</button>'+
+                            '</form>';
+        if (element == null){
+          document.getElementById('container').appendChild(newElement);
+        } else {
+          element.parentNode.removeChild(element);
+        }
     });
-
+    
+    
+}
+function SearchPage2(){
+  
+  var list='';
+  fetch('/search')
+  .then(response => response.json())
+  .then(data => {
+  var option = document.getElementById('options').value;
+  var query ='';
+  if (option=='genres'){
+    query = document.getElementById('options2').value;
+    fetch('https://api.themoviedb.org/3/discover/movie?with_genres='+ query +'&sort_by=popularity.desc&api_key=d43b2cf37b68ac54e47dbe77c0b7edb6')
+       .then(response => response.json())
+       .then(data => {
+        document.getElementById('content2').innerHTML='<h2 id="title" class="heading-h2 text-center divider"><span class="gsap-reveal">'+ (document.getElementById('options2')).options[(document.getElementById('options2')).selectedIndex].text +'s Popular Films</span></h2>'+
+        '<span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>'+
+        '</div>';
+        document.getElementById('searchoptions').parentNode.removeChild(document.getElementById('searchoptions'));
+        for (i=0;i<6;i++){
+          console.log(data.results[i].original_title);
+          list += ('<div class="col-md-6 col-lg-4 mb-4">'+
+              '<div class="feature-v1">'+
+              '<div class="wrap-icon mb-3"><img src="https://image.tmdb.org/t/p/w300'+ data.results[i].poster_path+
+              '"></div>'+
+              '<h3 class="movietitle">'+data.results[i].original_title+'</h3>'+
+              '<p class="movieinfo">'+data.results[i].overview+' </p>'+
+              '</div>'+
+              '</div>');
+        }
+        document.getElementById("row").innerHTML=list;
+      });
+  }else if (option=='actors'){
+    query = document.getElementById('options2').value;
+    var mainquery = query.replace(" ", "+");
+    fetch('https://api.themoviedb.org/3/search/person?api_key=d43b2cf37b68ac54e47dbe77c0b7edb6&query='+mainquery)
+       .then(response => response.json())
+       .then(data => {
+        document.getElementById('searchoptions').parentNode.removeChild(document.getElementById('searchoptions'));
+        document.getElementById('content2').innerHTML='<h2 id="title" class="heading-h2 text-center divider"><span class="gsap-reveal">'+query +'s Popular Films</span></h2>'+
+        '<span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>'+
+      '</div>';
+         for (i=0;i<data.results[0].known_for.length;i++){
+          console.log(data.results[0].known_for[i].original_title);
+          list += ('<div class="col-md-6 col-lg-4 mb-4">'+
+              '<div class="feature-v1">'+
+              '<div class="wrap-icon mb-3"><img src="https://image.tmdb.org/t/p/w300'+ data.results[0].known_for[i].poster_path+
+              '"></div>'+
+              '<h3 class="movietitle">'+data.results[0].known_for[i].original_title+'</h3>'+
+              '<p class="movieinfo">'+data.results[0].known_for[i].overview+' </p>'+
+              '</div>'+
+              '</div>');
+    //console.log(list);
+    
+         }
+         document.getElementById("row").innerHTML=list;
+      });
+  }
+    
+  });
 }
 
 

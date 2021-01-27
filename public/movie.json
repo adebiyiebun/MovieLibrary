@@ -1,8 +1,53 @@
 {
         "movies":[
                 {
-                        "actors":["Gal Gadot","Elizabeth Olsen","Scarlett Johansson","Henry Cavill","Dwayne Johnson","Anya Taylor-Joy","Robert Downey Jr.","Tom Cruise","Johnny Depp","Will Smith","Robert De Niro","Denzel Washington","Morgan Freeman","Meryl Streep","Nicole Kidman","Jennifer Lawrence","Anne Hathaway","Angelina Jolie","Reese Witherspoon","Margot Robbie"],
-                        "genres":["Action","Adventure","Animation","Comedy","Crime","Documentary","Drama","Family","Horror","Mystery","Romance"]
+                        "actors":["Gal Gadot","Elizabeth Olsen","Scarlett Johansson","Henry Cavill","Dwayne Johnson","Anya Taylor-Joy","Robert Downey Jr.","Tom Cruise","Johnny Depp","Will Smith","Robert De Niro","Denzel Washington","Morgan Freeman","Meryl Streep","Nicole Kidman","Jennifer Lawrence","Anne Hathaway","Angelina Jolie","Reese Witherspoon","Margot Robbie","Lupita Nyong'o"],
+                        "genres":[
+                                {
+                                        "name":"Action",
+                                        "id": "28"
+                                },
+                                {
+                                        "name":"Adventure",
+                                        "id": "12"
+                                },
+                                {
+                                        "name":"Animation",
+                                        "id": "16"
+                                },
+                                {
+                                        "name":"Comedy",
+                                        "id": "35"
+                                },
+                                {
+                                        "name":"Crime",
+                                        "id": "80"
+                                },
+                                {
+                                        "name":"Documentary",
+                                        "id": "99"
+                                },
+                                {
+                                        "name":"Drama",
+                                        "id": "18"
+                                },
+                                {
+                                        "name":"Family",
+                                        "id": "10751"
+                                },
+                                {
+                                        "name":"Horror",
+                                        "id": "27"
+                                },
+                                {
+                                        "name":"Mystery",
+                                        "id": "9648"
+                                },
+                                {
+                                        "name":"Romance",
+                                        "id": "10749"
+                                }   
+                        ]
                 }
         ]
 }

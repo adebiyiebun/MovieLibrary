@@ -73,7 +73,26 @@ input[type=text] {
   margin-right: 20px;
   margin-bottom: 20px;
   color: white;
-   
+}
+select {
+  width: 60%;
+  text-align: center;
+  padding: 8px 10px;
+  border:white;
+  
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  position: relative;
+  margin-left: 70px;
+  margin-right: 5px;
+}
+
+.searchform{
+  position: relative;
+  margin-left: 70px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 button{
   border: 1px solid white;
