@@ -17,5 +17,8 @@
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.1"
   }
 }
