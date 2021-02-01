@@ -1,15 +1,21 @@
-let HomePage = {
-    render : async () => {
-        var title = 'Current Popular Movies';
-        let view =  /*html*/`
-            <section class="section">
-                <h1> About </h1>
-            </section>
-        `
-        return title
-    },
-    after_render: async () => {}
-        
+import AbstractView from "./components.js"
+export default class extends AbstractView {
+   constructor(params) {
+       super(params);
+       this.setTitle("Home");
+   }
+   async getHtml() {
+      return `
+          <h1>Welcome back, Dom</h1>
+          <p>
+              Fugiat voluptate et nisi Lorem cillum anim sit do eiusmod occaecat irure do. Reprehenderit anim fugiat sint exercitation consequat. Sit anim laborum sit amet Lorem adipisicing ullamco duis. Anim in do magna ea pariatur et.
+          </p>
+          <p>
+              <a href="/posts" data-link>View recent posts</a>.
+          </p>
+      `;
+  }
 }
 
-export default HomePage;
+
+

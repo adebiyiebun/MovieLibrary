@@ -1,44 +1,145 @@
 {
-    "users": [
-      {
-        "userId": 0,
-        "firstName": "Ebun",
-        "lastName": "Adebiyi",
-        "emailAddress": "ebunadebiyi@hotmail.com",
-        "password":"Ade12Eb",
-        "storedMovies":["464052","508442","614911","512200"]
-      },
-      {
-        "userId": 1,
-        "firstName": "John",
-        "lastName": "Smith",
-        "emailAddress": "johnsmith@hotmail.com",
-        "password":"John13S",
-        "storedMovies":["464052","508442","614911"]
-      },
-      {
-        "userId": 2,
-        "firstName": "Joanna",
-        "lastName": "Ross",
-        "emailAddress": "joannaross@hotmail.com",
-        "password":"JoRoss3",
-        "storedMovies":["464052","508442","614911"]
-      },
-      {
-        "userId": 3,
-        "firstName": "Rachel",
-        "lastName": "Zane",
-        "emailAddress": "rachelzane@hotmail.com",
-        "password":"ZaneR1",
-        "storedMovies":["464052","508442","614911"]
-      },
-      {
-        "userId": 4,
-        "firstName": "Michael",
-        "lastName": "Ross",
-        "emailAddress": "mikeross@hotmail.com",
-        "password":"MikeRoss3",
-        "storedMovies":["464052","508442","614911","495764"]
-      }
-    ]
-  }
+  "users": [
+    {
+      "userId": 0,
+      "firstName": "Ebun",
+      "lastName": "Adebiyi",
+      "emailAddress": "ebunadebiyi@hotmail.com",
+      "password": "Ade12Eb",
+      "storedMovies": [
+        "464052",
+        "508442",
+        "614911",
+        "512200",
+        "614911",
+        "614911",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996",
+        "775996"
+      ]
+    },
+    {
+      "userId": 1,
+      "firstName": "John",
+      "lastName": "Smith",
+      "emailAddress": "johnsmith@hotmail.com",
+      "password": "John13S",
+      "storedMovies": [
+        "464052",
+        "508442",
+        "614911"
+      ]
+    },
+    {
+      "userId": 2,
+      "firstName": "Joanna",
+      "lastName": "Ross",
+      "emailAddress": "joannaross@hotmail.com",
+      "password": "JoRoss3",
+      "storedMovies": [
+        "464052",
+        "508442",
+        "614911"
+      ]
+    },
+    {
+      "userId": 3,
+      "firstName": "Rachel",
+      "lastName": "Zane",
+      "emailAddress": "rachelzane@hotmail.com",
+      "password": "ZaneR1",
+      "storedMovies": [
+        "464052",
+        "508442",
+        "614911"
+      ]
+    },
+    {
+      "userId": 4,
+      "firstName": "Michael",
+      "lastName": "Ross",
+      "emailAddress": "mikeross@hotmail.com",
+      "password": "MikeRoss3",
+      "storedMovies": [
+        "464052",
+        "508442",
+        "614911",
+        "495764",
+        "508442",
+        "508442",
+        "508442",
+        "508442",
+        "464052",
+        "464052",
+        "464052",
+        "464052",
+        "464052",
+        "464052"
+      ]
+    },
+    {
+      "firstName": "Olawale",
+      "lastName": "Adebiyi",
+      "email": "oadebiyi@hotmail.com",
+      "password": "Ade12Eb",
+      "id": 6
+    },
+    {
+      "firstName": "tester",
+      "lastName": "tester",
+      "emailAddress": "tester",
+      "password": "tester",
+      "userId": 10,
+      "storedMovies": []
+    },
+    {
+      "firstName": "TEST",
+      "lastName": "TEST",
+      "email": "TEST",
+      "password": "TEST",
+      "userId": 11,
+      "storedMovies": []
+    },
+    {
+      "firstName": "Ebun",
+      "lastName": "Adebiyi",
+      "email": "oadebiyi@hotmail.com",
+      "password": "Ade12Eb",
+      "userId": 8,
+      "storedMovies": []
+    },
+    {
+      "firstName": "Olawale",
+      "lastName": "Adebiyi",
+      "email": "oadebiyi@hotmail.com",
+      "password": "12ebun12",
+      "userId": 9,
+      "storedMovies": []
+    },
+    {
+      "firstName": "Olawale",
+      "lastName": "Adebiyi",
+      "email": "oadebiyi@hotmail.com",
+      "password": "12ebun12",
+      "userId": 10,
+      "storedMovies": []
+    },
+    {
+      "firstName": "Olawale",
+      "lastName": "Adebiyi",
+      "email": "oadebiyi@hotmail.com",
+      "password": "Adebiyi",
+      "userId": 11,
+      "storedMovies": []
+    }
+  ]
+}

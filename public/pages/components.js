@@ -1,10 +1,13 @@
-function Title(){
-  var item=  '<h2>hello</h2>';
-  return item;
+export default class {
+  constructor(params) {
+      this.params = params;
+  }
+
+  setTitle(title) {
+      document.title = title;
+  }
+
+  async getHtml() {
+      return "";
+  }
 }
-
-
-let Row ={
-
-}
-export default {Title,Row};
